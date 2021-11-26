@@ -1,0 +1,36 @@
+# Building docs into the build branch
+
+name: Build documentation pages
+on:
+  push:
+    branches: 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@master
+        with:
+          path: 'main'
+
+      - name: Checkout build branch
+        uses: actions/checkout@master
+        with:
+          path: 'build'
+      
+      - name: Install Deps
+        run: pip install -r "${GITHUB_WORKSPACE}/main/requirements.txt"
+        
+      - name: Build docs
+        run: sphinx-build -b html "${GITHUB_WORKSPACE}/main/docs" "${GITHUB_WORKSPACE}/build"
+      
+      - name: Push changes into build branch
+        run: |
+          cd "${GITHUB_WORKSPACE}/build"
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "update documentation bot"
+          git push

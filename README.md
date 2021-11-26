@@ -23,3 +23,9 @@ https://user-images.githubusercontent.com/28003269/140365097-63408046-33dc-4fd8-
 - Using `Edge crease` tool (Ctrl + E) with live update creases edges randomly
 - Base mesh should consist only of quad polygons
 - Animation is not supported
+
+## Description
+You can think about the add-on as a custom modifier based on node editor (similar to geometry nodes modifier).
+Except that you won't be able to find it neither in list of modifiers nor in modifier stack because
+custom modifiers are in [anti-features list](https://wiki.blender.org/wiki/Reference/AntiFeatures).
+Instead, the main panel can be found in Property panel (N) of viewport editor.

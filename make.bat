@@ -1,4 +1,4 @@
-@ECHO ON
+@ECHO OFF
 
 pushd %~dp0
 

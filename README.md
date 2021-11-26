@@ -6,6 +6,8 @@
 
 https://user-images.githubusercontent.com/28003269/140365097-63408046-33dc-4fd8-8cbf-4f52fe9dc973.mp4
 
+[![BuildDocs](https://github.com/Durman/BuildingNodesDocs/actions/workflows/build_docs.yml/badge.svg)](https://github.com/Durman/BuildingNodesDocs/actions/workflows/build_docs.yml)
+
 ## Features
 - Cover vertical polygons (of base mesh) with wall panels.
 - Using node editor for determining pattern of wall panels (facade style)

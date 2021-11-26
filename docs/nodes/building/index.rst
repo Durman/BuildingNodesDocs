@@ -1,0 +1,8 @@
+========
+Building
+========
+
+.. toctree::
+   :glob:
+
+   *

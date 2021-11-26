@@ -9,11 +9,14 @@ Welcome to Building Nodes's documentation!
 Hello world
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
 
-   nodes
-
+   quick_start
+   installation
+   user_interface
+   data_structure
+   execution_system
+   nodes/categories
 
 
 Indices and tables

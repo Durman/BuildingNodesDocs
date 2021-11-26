@@ -24,7 +24,8 @@ jobs:
         run: pip install -r "${GITHUB_WORKSPACE}/main/requirements.txt"
         
       - name: Build docs
-        run: sphinx-build -b html "${GITHUB_WORKSPACE}/main/docs" "${GITHUB_WORKSPACE}/build"
+        run: sphinx-build -b html "${GITHUB_WORKSPACE}/main/docs" "${GITHUB_WORKSPACE}/build" -W --keep-going
+        # -W: convert first warning into error and exit with 1; --keep-going: convert all warnings into errors
       
       - name: Push changes into build branch
         run: |

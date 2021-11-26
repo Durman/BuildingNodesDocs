@@ -12,6 +12,8 @@ Hello world
    :maxdepth: 2
    :caption: Contents:
 
+   nodes
+
 
 
 Indices and tables

@@ -18,6 +18,7 @@ jobs:
         uses: actions/checkout@master
         with:
           path: 'build'
+          ref: 'build'  # switch to build branch
       
       - name: Install Deps
         run: pip install -r "${GITHUB_WORKSPACE}/main/requirements.txt"

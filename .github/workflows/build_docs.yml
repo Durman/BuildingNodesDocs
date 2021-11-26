@@ -1,6 +1,6 @@
 # Building docs into the build branch
 
-name: Build documentation pages
+name: BuildDocs
 on:
   push:
     branches: 'main'

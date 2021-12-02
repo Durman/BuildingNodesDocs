@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Floor Pattern &mdash; Building Nodes 1.0 documentation</title>
+  <title>Floor Pattern Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Floor switch" href="floor_switch.html" />
-    <link rel="prev" title="Floor Attributes" href="floor_attributes.html" /> 
+    <link rel="prev" title="Floor Attributes Node" href="floor_attributes.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,11 +47,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../building/index.html">Building</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Floor</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="chain_floors.html">Chain Floors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="floor_attributes.html">Floor Attributes</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Floor Pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chain_floors.html">Chain Floors Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="floor_attributes.html">Floor Attributes Node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Floor Pattern Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remote-panel-properties">Remote panel properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="floor_switch.html">Floor switch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="join_floors.html">Join Floors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="join_floors.html">Join Floors Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
@@ -76,7 +83,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Floor</a> &raquo;</li>
-      <li>Floor Pattern</li>
+      <li>Floor Pattern Node</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/nodes/floor/floor_pattern.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -86,15 +93,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="floor-pattern">
-<h1>Floor Pattern<a class="headerlink" href="#floor-pattern" title="Permalink to this headline"></a></h1>
+  <section id="floor-pattern-node">
+<h1>Floor Pattern Node<a class="headerlink" href="#floor-pattern-node" title="Permalink to this headline"></a></h1>
+<p>This node can combine panels into a floor. You can imagine a floor as 1D array
+of panels. Read details in <a class="reference internal" href="../../data_structure.html"><span class="doc">Data Structure</span></a>.</p>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Left</dt><dd><p>Panel to be put to the left most side.</p>
+</dd>
+<dt>Fill</dt><dd><p>Panel which should be used to cover all available space of the floor.</p>
+</dd>
+<dt>Right</dt><dd><p>Panel to be put to the right most side.</p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Height</dt><dd><p>If enabled the height of the floor will be defined by this value otherwise
+the height will be determined by the highest panel in the floor.</p>
+</dd>
+<dt>Scalable</dt><dd><p>It is used by <a class="reference internal" href="../facade/facade_pattern.html"><span class="doc">Facade Pattern</span></a>. If true the floor will
+take part in adopting size of facade to actual dimensions.</p>
+</dd>
+<dt>Join size</dt><dd><p>It is used by <a class="reference internal" href="../facade/join_facades.html"><span class="doc">Join Facades Node</span></a>. It determines the width of
+the floor in total size of the facade.</p>
+</dd>
+</dl>
+</section>
+<section id="remote-panel-properties">
+<h2>Remote panel properties<a class="headerlink" href="#remote-panel-properties" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Scalable</dt><dd><p>This properties is used to define which panels can be scaled to adjust width
+of the floor so it would be equal to width of the facade.</p>
+</dd>
+</dl>
+</section>
+<section id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Floor</dt><dd><p>Resulting floor</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="floor_attributes.html" class="btn btn-neutral float-left" title="Floor Attributes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="floor_attributes.html" class="btn btn-neutral float-left" title="Floor Attributes Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="floor_switch.html" class="btn btn-neutral float-right" title="Floor switch" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

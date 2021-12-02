@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join Floors &mdash; Building Nodes 1.0 documentation</title>
+  <title>Join Floors Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -47,11 +47,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../building/index.html">Building</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Floor</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="chain_floors.html">Chain Floors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="floor_attributes.html">Floor Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="floor_pattern.html">Floor Pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chain_floors.html">Chain Floors Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="floor_attributes.html">Floor Attributes Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="floor_pattern.html">Floor Pattern Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="floor_switch.html">Floor switch</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Join Floors</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Join Floors Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remote-floor-properties">Remote floor properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
@@ -76,7 +82,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Floor</a> &raquo;</li>
-      <li>Join Floors</li>
+      <li>Join Floors Node</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/nodes/floor/join_floors.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -86,8 +92,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="join-floors">
-<h1>Join Floors<a class="headerlink" href="#join-floors" title="Permalink to this headline"></a></h1>
+  <section id="join-floors-node">
+<h1>Join Floors Node<a class="headerlink" href="#join-floors-node" title="Permalink to this headline"></a></h1>
+<p>This node can join floors along horizontal axis. It’s possible to classify
+to different kinds of floors - infinite and finite. The node tries to get
+finite floors first and if after that there is free space it uses infinite
+floors to full all the rest space. If it joins more then one infinite floor
+the spaces is divided between them according to their <cite>join size</cite> value.</p>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Floor</dt><dd><p>Repeatable socket which expects floors to join</p>
+</dd>
+</dl>
+</section>
+<section id="remote-floor-properties">
+<h2>Remote floor properties<a class="headerlink" href="#remote-floor-properties" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Join size</dt><dd><p>It is used only if there is two or more infinite floors, with Fill panel,
+to join. In this case size of the infinite floors is determined proportionally
+to their join size.</p>
+</dd>
+</dl>
+</section>
+<section id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Floor</dt><dd><p>Resulting floor</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+</section>
 </section>
 
 

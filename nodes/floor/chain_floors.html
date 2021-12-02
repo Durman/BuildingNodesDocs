@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chain Floors &mdash; Building Nodes 1.0 documentation</title>
+  <title>Chain Floors Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,7 +18,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Floor Attributes" href="floor_attributes.html" />
+    <link rel="next" title="Floor Attributes Node" href="floor_attributes.html" />
     <link rel="prev" title="Floor" href="index.html" /> 
 </head>
 
@@ -47,11 +47,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../building/index.html">Building</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Floor</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Chain Floors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="floor_attributes.html">Floor Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="floor_pattern.html">Floor Pattern</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chain Floors Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="floor_attributes.html">Floor Attributes Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="floor_pattern.html">Floor Pattern Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="floor_switch.html">Floor switch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="join_floors.html">Join Floors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="join_floors.html">Join Floors Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
@@ -76,7 +81,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Floor</a> &raquo;</li>
-      <li>Chain Floors</li>
+      <li>Chain Floors Node</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/nodes/floor/chain_floors.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -86,8 +91,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="chain-floors">
-<h1>Chain Floors<a class="headerlink" href="#chain-floors" title="Permalink to this headline"></a></h1>
+  <section id="chain-floors-node">
+<h1>Chain Floors Node<a class="headerlink" href="#chain-floors-node" title="Permalink to this headline"></a></h1>
+<p>It marks given floors so that they should be instanced together. If there is no
+enough space for all of them than neither of them will be instanced.</p>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Floor</dt><dd><p>Repeatable input of floors to be chained</p>
+</dd>
+</dl>
+</section>
+<section id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Floor</dt><dd><p>Chained floors</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+</section>
 </section>
 
 
@@ -95,7 +119,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Floor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="floor_attributes.html" class="btn btn-neutral float-right" title="Floor Attributes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="floor_attributes.html" class="btn btn-neutral float-right" title="Floor Attributes Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

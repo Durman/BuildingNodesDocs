@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facade Pattern &mdash; Building Nodes 1.0 documentation</title>
+  <title>Get Facade Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Get Facade Node" href="get_facade.html" />
-    <link rel="prev" title="Facade Attributes Node" href="facade_attributes.html" /> 
+    <link rel="next" title="Join Facades Node" href="join_facades.html" />
+    <link rel="prev" title="Facade Pattern" href="facade_pattern.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,14 +47,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../building/index.html">Building</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Facade</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="facade_attributes.html">Facade Attributes Node</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Facade Pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="facade_pattern.html">Facade Pattern</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Get Facade Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#remote-floor-properties">Remote floor properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="get_facade.html">Get Facade Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="join_facades.html">Join Facades Node</a></li>
 </ul>
 </li>
@@ -81,9 +81,9 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Facade</a> &raquo;</li>
-      <li>Facade Pattern</li>
+      <li>Get Facade Node</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/nodes/facade/facade_pattern.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/nodes/facade/get_facade.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -91,37 +91,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="facade-pattern">
-<h1>Facade Pattern<a class="headerlink" href="#facade-pattern" title="Permalink to this headline"></a></h1>
-<p>This node can combine floors into a facade style. You can imagine floors as rows
-in 2D array. So this node takes different rows and combine them together.
-Read details in <a class="reference internal" href="../../data_structure.html"><span class="doc">Data Structure</span></a>.</p>
+  <section id="get-facade-node">
+<h1>Get Facade Node<a class="headerlink" href="#get-facade-node" title="Permalink to this headline"></a></h1>
+<p>The nodes gives possibility of choosing facades by an index.</p>
 <section id="inputs">
 <h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Last</dt><dd><p>Last floor</p>
+<dt>Index</dt><dd><p>Index of the facade to be used. 0 index will shoos first connected facade, 1
+the second and so on. If there is no facade for given index the facade will be
+ignored.</p>
 </dd>
-<dt>Fill</dt><dd><p>Floor which should be used to cover facade between first and last floors if
-they were given</p>
-</dd>
-<dt>First</dt><dd><p>Fist floor</p>
+<dt>Facade</dt><dd><p>Repeatable socket of arbitrary sequence of facades</p>
 </dd>
 </dl>
 </section>
 <section id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Size</dt><dd><p>This parameter is used by <a class="reference internal" href="join_facades.html"><span class="doc">Join Facades Node</span></a>. It shows a size which this
-facade can obtain from total size of main facade.</p>
+<dt>Mode</dt><dd><p>???</p>
 </dd>
 </dl>
 </section>
-<section id="remote-floor-properties">
-<h2>Remote floor properties<a class="headerlink" href="#remote-floor-properties" title="Permalink to this headline"></a></h2>
+<section id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Scalable</dt><dd><p>If true the floor will be scale along Z axis together with other scalable
-floors to fit total height of floors into facade height. If all floors are
-not scalable the facade may have gap in the top.</p>
+<dt>Facade</dt><dd><p>Selected facade.</p>
 </dd>
 </dl>
 </section>
@@ -134,8 +128,8 @@ not scalable the facade may have gap in the top.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="facade_attributes.html" class="btn btn-neutral float-left" title="Facade Attributes Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="get_facade.html" class="btn btn-neutral float-right" title="Get Facade Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="facade_pattern.html" class="btn btn-neutral float-left" title="Facade Pattern" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="join_facades.html" class="btn btn-neutral float-right" title="Join Facades Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

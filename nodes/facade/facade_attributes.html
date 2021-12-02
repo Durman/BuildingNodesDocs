@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facade Attributes &mdash; Building Nodes 1.0 documentation</title>
+  <title>Facade Attributes Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -46,9 +46,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../categories.html">Nodes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../building/index.html">Building</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Facade</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Facade Attributes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Facade Attributes Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="facade_pattern.html">Facade Pattern</a></li>
-<li class="toctree-l3"><a class="reference internal" href="join_facades.html">Join Facades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_facade.html">Get Facade Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="join_facades.html">Join Facades Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../floor/index.html">Floor</a></li>
@@ -74,7 +79,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Facade</a> &raquo;</li>
-      <li>Facade Attributes</li>
+      <li>Facade Attributes Node</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/nodes/facade/facade_attributes.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -84,8 +89,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="facade-attributes">
-<h1>Facade Attributes<a class="headerlink" href="#facade-attributes" title="Permalink to this headline"></a></h1>
+  <section id="facade-attributes-node">
+<h1>Facade Attributes Node<a class="headerlink" href="#facade-attributes-node" title="Permalink to this headline"></a></h1>
+<p>This node outputs facade attributes as fields. Read more about <a class="reference internal" href="../../data_structure.html#fields"><span class="std std-ref">Fields</span></a>
+and <a class="reference internal" href="../../data_structure.html#facades"><span class="std std-ref">Facade</span></a>.</p>
+<section id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Left corner angle</dt><dd><p>Angle between current facade and neighbour facade from left side. Unit of
+angle is radian. The straight angle between outputs 0 radians. Obtuse angles
+return positive values, reflex angles return negative values. It’s possible
+that the same corner has multiple different angles in this case only one of
+them is taken into account.</p>
+</dd>
+<dt>Right corner angle</dt><dd><p>The same as Left angle but this angle is determined by the current facade
+and facade from the right side.</p>
+</dd>
+<dt>Material index</dt><dd><p>Index of a material slot which is assigned to faces of the facade. By default
+facades are split by border lines of different materials so one facade always
+has only one associated material index.</p>
+</dd>
+<dt>Index</dt><dd><p>Index of the current facade. Also this can be considered as facade ID because
+indexing of facades does not have any particular order.</p>
+</dd>
+<dt>Length</dt><dd><p>Distance between left and right corners.</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+</section>
 </section>
 
 

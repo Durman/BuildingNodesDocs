@@ -17,6 +17,9 @@ Facade
 Floor
 -----
 
+
+.. _panels:
+
 Panel
 -----
 

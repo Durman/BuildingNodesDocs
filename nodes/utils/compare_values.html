@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utils &mdash; Building Nodes 1.0 documentation</title>
+  <title>Compare Values Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Compare Values Node" href="compare_values.html" />
-    <link rel="prev" title="Panel Switch" href="../panel/panel_switch.html" /> 
+    <link rel="next" title="Integer Node" href="intiger.html" />
+    <link rel="prev" title="Utils" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,8 +48,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../floor/index.html">Floor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Utils</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="compare_values.html">Compare Values Node</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Utils</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Compare Values Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="intiger.html">Integer Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html">Math Node</a></li>
 </ul>
@@ -73,9 +77,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
-      <li>Utils</li>
+          <li><a href="index.html">Utils</a> &raquo;</li>
+      <li>Compare Values Node</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/nodes/utils/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/nodes/utils/compare_values.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -83,35 +88,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="utils">
-<h1>Utils<a class="headerlink" href="#utils" title="Permalink to this headline"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="compare_values.html">Compare Values Node</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="compare_values.html#properties">Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compare_values.html#outputs">Outputs</a></li>
+  <section id="compare-values-node">
+<h1>Compare Values Node<a class="headerlink" href="#compare-values-node" title="Permalink to this headline"></a></h1>
+<p>The node performs comparison operations.</p>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Operation</dt><dd><p>Comparison operation to use</p>
+<ul class="simple">
+<li><p><strong>Equal:</strong> true if two values are equal</p></li>
+<li><p><strong>Is close:</strong> true if tow values are close to each other according to
+given maximum possible difference</p></li>
+<li><p><strong>Not equal:</strong> true if two values are not equal</p></li>
+<li><p><strong>Grater than:</strong> true if first value is grater</p></li>
+<li><p><strong>Grater or equal:</strong> true if first value grater or equal to the second one</p></li>
+<li><p><strong>Less than:</strong>  true if first value is less</p></li>
+<li><p><strong>Less or equal:</strong>  true if first values is less or equal to the second one</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="intiger.html">Integer Node</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intiger.html#properties">Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intiger.html#outputs">Outputs</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="math.html">Math Node</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="math.html#properties">Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math.html#outputs">Outputs</a></li>
-</ul>
-</li>
-</ul>
-</div>
+</dd>
+<dt>Float</dt><dd><p>First value</p>
+</dd>
+<dt>Float</dt><dd><p>Second value</p>
+</dd>
+<dt>Tolerance (Is close mode)</dt><dd><p>Maximum difference between values after which they are recognized as unequal</p>
+</dd>
+</dl>
+</section>
+<section id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Bool</dt><dd><p>True of False value</p>
+</dd>
+</dl>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../panel/panel_switch.html" class="btn btn-neutral float-left" title="Panel Switch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="compare_values.html" class="btn btn-neutral float-right" title="Compare Values Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="intiger.html" class="btn btn-neutral float-right" title="Integer Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

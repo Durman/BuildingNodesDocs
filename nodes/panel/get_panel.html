@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel Attributes Node &mdash; Building Nodes 1.0 documentation</title>
+  <title>Get Panel Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Panel Randomize Node" href="panel_randomize.html" />
-    <link rel="prev" title="Panel Node" href="panel.html" /> 
+    <link rel="next" title="Join Panels Node" href="join_panels.html" />
+    <link rel="prev" title="Panel" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,15 +48,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../floor/index.html">Floor</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Panel</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="get_panel.html">Get Panel Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="join_panels.html">Join Panels Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mirror_panel.html">Mirror Panel Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="panel.html">Panel Node</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Panel Attributes Node</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Get Panel Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="join_panels.html">Join Panels Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mirror_panel.html">Mirror Panel Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="panel.html">Panel Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="panel_attributes.html">Panel Attributes Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="panel_randomize.html">Panel Randomize Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="panel_switch.html">Panel Switch</a></li>
 </ul>
@@ -82,9 +84,9 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Panel</a> &raquo;</li>
-      <li>Panel Attributes Node</li>
+      <li>Get Panel Node</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/nodes/panel/panel_attributes.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/nodes/panel/get_panel.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -92,15 +94,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="panel-attributes-node">
-<h1>Panel Attributes Node<a class="headerlink" href="#panel-attributes-node" title="Permalink to this headline"></a></h1>
-<p>This node outputs panel attributes as fields. Read more about <a class="reference internal" href="../../data_structure.html#fields"><span class="std std-ref">Fields</span></a>
-and <a class="reference internal" href="../../data_structure.html#panels"><span class="std std-ref">Panel</span></a>.</p>
+  <section id="get-panel-node">
+<h1>Get Panel Node<a class="headerlink" href="#get-panel-node" title="Permalink to this headline"></a></h1>
+<p>This node can choose one Panel from their collection according to the given
+index.</p>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Panels</dt><dd><p>Repeatable socket which expect collection of input panels</p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Index</dt><dd><p>Index of the panel. If the index is greater than number of given panels
+the node handle this according to its mode property.</p>
+</dd>
+<dt>Mode</dt><dd><p>It determines how to handle the case when given index is grater than number
+of given panels.</p>
+<ul class="simple">
+<li><p><strong>None:</strong> Nothing will be return</p></li>
+<li><p><strong>Repeat:</strong> Last panel will be return</p></li>
+<li><p><strong>Cycle:</strong> In this mode when an index goes out of bounds it returns back
+to the start of the collection with index decreased to number of
+elements in the collection. This operation repeats till the proper panel
+won’t be found. For example in collection of 3 numbers <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2</span></code>
+an index <code class="docutils literal notranslate"><span class="pre">4</span></code> points to number <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="outputs">
 <h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Index</dt><dd><p>Index of the panel in a row (floor) of panels. This is incrementing by
-<a class="reference internal" href="../floor/floor_pattern.html"><span class="doc">Floor Pattern Node</span></a>.</p>
+<dt>Panel</dt><dd><p>Panel chosen by the index</p>
 </dd>
 </dl>
 </section>
@@ -113,8 +141,8 @@ and <a class="reference internal" href="../../data_structure.html#panels"><span 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="panel.html" class="btn btn-neutral float-left" title="Panel Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="panel_randomize.html" class="btn btn-neutral float-right" title="Panel Randomize Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Panel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="join_panels.html" class="btn btn-neutral float-right" title="Join Panels Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

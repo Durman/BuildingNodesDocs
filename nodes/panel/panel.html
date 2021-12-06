@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel &mdash; Building Nodes 1.0 documentation</title>
+  <title>Panel Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Panel Attributes" href="panel_attributes.html" />
-    <link rel="prev" title="Mirror Panel" href="mirror_panel.html" /> 
+    <link rel="next" title="Panel Attributes Node" href="panel_attributes.html" />
+    <link rel="prev" title="Mirror Panel Node" href="mirror_panel.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,11 +48,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../floor/index.html">Floor</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Panel</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="join_panels.html">Join Panels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mirror_panel.html">Mirror Panel</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Panel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="panel_attributes.html">Panel Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="panel_randomize.html">Panel Randomize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_panel.html">Get Panel Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="join_panels.html">Join Panels Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mirror_panel.html">Mirror Panel Node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Panel Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="panel_attributes.html">Panel Attributes Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="panel_randomize.html">Panel Randomize Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="panel_switch.html">Panel Switch</a></li>
 </ul>
 </li>
@@ -77,7 +83,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Panel</a> &raquo;</li>
-      <li>Panel</li>
+      <li>Panel Node</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/nodes/panel/panel.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -87,16 +93,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="panel">
-<h1>Panel<a class="headerlink" href="#panel" title="Permalink to this headline"></a></h1>
+  <section id="panel-node">
+<h1>Panel Node<a class="headerlink" href="#panel-node" title="Permalink to this headline"></a></h1>
+<p>This node can create panel from an object. Also it keeps all related to the
+panel properties. Read more about <a class="reference internal" href="../../data_structure.html#panels"><span class="std std-ref">Panel</span></a>.</p>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Object</dt><dd><p>Object which should be used as a panel. You can’t use object which has
+buildings style as a panel.</p>
+</dd>
+<dt>Scalable</dt><dd><p>This property shows whether the panel can be scaled to be adjusted to some
+size. It is used by <a class="reference internal" href="../floor/floor_pattern.html"><span class="doc">Floor Pattern Node</span></a>.</p>
+</dd>
+<dt>Probability</dt><dd><p>The chance of using the panel. It’s used by <a class="reference internal" href="panel_randomize.html"><span class="doc">Panel Randomize Node</span></a>.</p>
+</dd>
+</dl>
+</section>
+<section id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Panel</dt><dd><p>New panel</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mirror_panel.html" class="btn btn-neutral float-left" title="Mirror Panel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="panel_attributes.html" class="btn btn-neutral float-right" title="Panel Attributes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mirror_panel.html" class="btn btn-neutral float-left" title="Mirror Panel Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="panel_attributes.html" class="btn btn-neutral float-right" title="Panel Attributes Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

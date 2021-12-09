@@ -29,7 +29,7 @@ Face is recognized as part of a facade according to certain rules:
 
 .. warning::
 
-   .. figure:: /images/non_quad.*
+   .. figure:: /images/Non_quad.*
       :align: right
       :figwidth: 150px
 

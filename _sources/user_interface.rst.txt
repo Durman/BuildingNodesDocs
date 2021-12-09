@@ -29,6 +29,8 @@ Building properties
 Panel properties
 ----------------
 
+.. _set_scope_operator:
+
 **Set scope**
 
 

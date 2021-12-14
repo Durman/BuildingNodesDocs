@@ -14,6 +14,8 @@ surfaces and building base geometry is used. The advantage of this approach is
 that the same panels and rules can be applied to multiple objects. Also it
 possible to re-apply the rules whenever an object is changed.
 
+.. _base_geometry:
+
 Base geometry
 -------------
 

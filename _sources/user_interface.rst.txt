@@ -2,6 +2,7 @@
 User Interface
 **************
 
+.. _main_panel:
 
 Building nodes panel
 ====================

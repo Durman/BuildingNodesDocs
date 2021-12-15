@@ -7,7 +7,8 @@ This is brief instruction how to start use the add-on.
 .. image:: /images/Quick_start1.*
    :width: 700 px
 
-0. Make sure tha the add-on is :doc:`installed <installation>`.
+0. Make sure tha the add-on is :doc:`installed <installation>`. The installation
+   process is standard.
 #. Create/don't remove default cube. It will be :ref:`base_geometry` for future
    building
 #. Add default plane. It will be a :ref:`panel <panels>`.

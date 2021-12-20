@@ -19,6 +19,7 @@ https://user-images.githubusercontent.com/28003269/140365097-63408046-33dc-4fd8-
 - Supporting node groups
 - Supporting geometry nodes
 - Hipped roofs
+- Adding Building styles to asset library
 
 ## Limitations
 - Using `Loop cut` tool with live update makes Blender to crush https://developer.blender.org/T67093

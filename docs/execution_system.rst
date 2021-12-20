@@ -35,6 +35,8 @@ Both updates can be enabled/disabled via :ref:`main panel <main_panel>`.
    tree can be recreated from scratch without saving any changes in previous
    one.
 
+.. _tree_editor:
+
 -----------
 Tree editor
 -----------

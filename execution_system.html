@@ -43,7 +43,10 @@
 <li class="toctree-l1"><a class="reference internal" href="user_interface.html">User Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Execution system</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tree-editor">Tree editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tree-editor">Tree editor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#errors">Errors</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nodes/categories.html">Nodes</a></li>
@@ -104,6 +107,14 @@ facade style. It’s not recommended to edit its tree. In new versions the
 tree can be recreated from scratch without saving any changes in previous
 one.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Also there is problem of copying an object with building style. When initial
+object is edited the copied object will repeat the shape of this changes.
+In order to make changes of the copy fully separate from initial object
+either building style tree should be updated (by dragging a link for
+example) or the copy should be put in edit mode.</p>
+</div>
 <section id="tree-editor">
 <span id="id1"></span><h2>Tree editor<a class="headerlink" href="#tree-editor" title="Permalink to this headline"></a></h2>
 <p>In general the work in facade style editor is similar to work in any other
@@ -119,6 +130,22 @@ which prevent from using node groups safely in add-ons. It also means that
 there are no custom properties per building. So there won’t be node groups
 at list until crushing issues won’t be fixed.</p></li>
 </ul>
+<section id="errors">
+<span id="id2"></span><h3>Errors<a class="headerlink" href="#errors" title="Permalink to this headline"></a></h3>
+<p>During tree execution there can be some errors which prevents building being
+updated. Errors are shown on the <a class="reference internal" href="user_interface.html#main-panel"><span class="std std-ref">main panel</span></a>. It can be some
+low level error which message is not very helpful and can be considered as bug.
+Or it can be a high level error:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Size error</dt><dd><p>It means that some of the panels has 0 height or 0 length. Panels can have
+0 length along any axis but not when it used to fill some space. For example
+a panel should has length if it is used to fill a floor.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
 </section>
 </section>
 

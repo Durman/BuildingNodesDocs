@@ -102,8 +102,8 @@ Panel can be created with :doc:`/nodes/panel/panel`.
    Also it's important to know that origin is also took into account during
    panels instancing. Typically it should be in the center of a panel.
 
-If `XY` orientation of the panels is not convenient you can always rotate and
-move panels in object mode however you like.
+   If `XY` orientation of the panels is not convenient you can always rotate and
+   move panels in object mode however you like.
 
 By default the size of a panel is determined by its bounding box, but it's
 possible override the size with :ref:`Set scope operator <set_scope_operator>`. 

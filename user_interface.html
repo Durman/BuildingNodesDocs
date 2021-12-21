@@ -46,7 +46,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#panel-properties">Panel properties</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#link-transfer-data-menu">Link/Transfer data menu</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#node-tree-interface">Node tree interface</a></li>
 </ul>
 </li>
@@ -89,37 +88,73 @@
 <p><code class="docutils literal notranslate"><span class="pre">3d</span> <span class="pre">Viewport</span> <span class="pre">-&gt;</span> <span class="pre">property</span> <span class="pre">panel</span></code></p>
 <section id="building-properties">
 <h3>Building properties<a class="headerlink" href="#building-properties" title="Permalink to this headline"></a></h3>
-<p><strong>Error massage</strong></p>
-<p><strong>Show in edit mode</strong></p>
-<p><strong>Realtime</strong></p>
-<p><strong>Show in render</strong></p>
-<p><strong>Building style tre</strong></p>
+<dl class="simple">
+<dt>Error massage</dt><dd><p>It is shown if there was an <a class="reference internal" href="execution_system.html#errors"><span class="std std-ref">error</span></a> during building style
+execution.</p>
+</dd>
+<dt>Show in edit mode</dt><dd><p>In edit mode base mesh and building panels will be displayed simultaneously.
+Editing base mesh will force to update building style. Read about
+<a class="reference internal" href="index.html#limitations"><span class="std std-ref">Limitations / roadmap</span></a> of this mode.</p>
+</dd>
+<dt>Realtime</dt><dd><p>If enabled any changes in a tree of a building style will cause rebuild the
+building model.</p>
+</dd>
+<dt>Show in render</dt><dd><p>Show building style during render.</p>
+</dd>
+<dt>Apply style (to active)</dt><dd><p>Operator which bakes building style into the base mesh.</p>
+</dd>
+<dt>Apply style (to selected)</dt><dd><p>Operator which bakes building style of selected objects.</p>
+</dd>
+<dt>Apply current style (to all)</dt><dd><p>Operator which bakes building styles of all visible objects in case if the
+style is the same with the style of active object.</p>
+</dd>
+<dt>Link style to selected</dt><dd><p>It works similar to other linking functionality of Blender. The operator
+assign building style of active object to selected objects. Also it can remove
+building style in case if active objects does not have any style. It also is
+available via <em>Link/Transfer data menu</em> <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">l</span></code>.</p>
+</dd>
+<dt>Select with the same style</dt><dd><p>The operator selects all visible objects which have the same building style
+as active object.</p>
+</dd>
+<dt>Building style tree</dt><dd><p>Node tree which should be used to generate building</p>
+</dd>
+</dl>
 </section>
 <section id="panel-properties">
 <h3>Panel properties<a class="headerlink" href="#panel-properties" title="Permalink to this headline"></a></h3>
-<p id="set-scope-operator"><strong>Set scope</strong></p>
+<dl class="simple" id="set-scope-operator">
+<dt>Set scope</dt><dd><p>This is an operator which serves two purposes. It sets origin of the active
+object and its bounding box which is used by Building style editor during
+distribution of panels. In order to use it a <a class="reference internal" href="data_structure.html#panels"><span class="std std-ref">panel</span></a> should be
+in edit mode and at list two points, corners of bounding box, should be
+selected. Don’t use the operator in edit mode of multiple objects.</p>
+</dd>
+</dl>
 </section>
-</section>
-<section id="link-transfer-data-menu">
-<h2>Link/Transfer data menu<a class="headerlink" href="#link-transfer-data-menu" title="Permalink to this headline"></a></h2>
-<p><strong>Link Building style</strong></p>
 </section>
 <section id="node-tree-interface">
 <h2>Node tree interface<a class="headerlink" href="#node-tree-interface" title="Permalink to this headline"></a></h2>
+<figure class="align-right">
+<img alt="_images/Node_settings.png" src="_images/Node_settings.png" />
+</figure>
 <p>In case if you are nof familiar with Blender tree interface here is official
 <a class="reference external" href="https://docs.blender.org/manual/en/latest/interface/controls/nodes/index.html">documentation</a> about them.</p>
-<dl class="simple">
-<dt>Node inputs / outputs</dt><dd><p>Sockets which expect complex data structure as Panels, Floors etc.</p>
-</dd>
-<dt>Node properties</dt><dd><p>A property of a node can be a socket or enum. Sockets have some simple value
-like float, integer, boolean etc. Properties can be found in node settings
-panel (located directly on a node) or in <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">panel</span> <span class="pre">-&gt;</span> <span class="pre">node</span> <span class="pre">-&gt;</span> <span class="pre">properties</span></code>
-. Properties are associated with logic of node where they are defined or
+<p>Unlike Blender build-in nodes in the add-on nearly all nodes have settings.
+To open the settings press on the gear picture located in first output socket
+of a node. Settings are divided on two parts:</p>
+<dl>
+<dt>Node properties</dt><dd><p>Properties of a node are presented as sockets of some elementary data
+structure as number, string, enum etc. By default most of them are hidden.
+It’s possible to change them without showing them in tree UI or it’s possible
+to show them py switching show property.</p>
+<p>Properties are associated with logic of node where they are defined or
 with data structure which is produced by this node. For example parameter
-size of <a class="reference internal" href="nodes/facade/facade_pattern.html"><span class="doc">Facade Pattern</span></a> is associated with facade which
-is generated by the node.</p>
+height of a <a class="reference internal" href="nodes/floor/floor_pattern.html"><span class="doc">Floor Pattern Node</span></a> is associated with floor which
+is generated by the node. Also properties can be used by another upstream
+nodes.</p>
+<p>Also this properties can be found in <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">panel</span> <span class="pre">-&gt;</span> <span class="pre">node</span> <span class="pre">-&gt;</span> <span class="pre">properties</span></code>.</p>
 </dd>
-<dt>Node remote properties</dt><dd><p>This properties can be found only in node settings. The difference between
+<dt>Node remote properties</dt><dd><p>The difference between
 normal node properties is that the remote properties are not define in a
 node where they are shown but in some downstream node. It shows which
 remote properties are used by the node.</p>

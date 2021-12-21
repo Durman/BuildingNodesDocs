@@ -35,6 +35,14 @@ Both updates can be enabled/disabled via :ref:`main panel <main_panel>`.
    tree can be recreated from scratch without saving any changes in previous
    one.
 
+.. warning::
+
+   Also there is problem of copying an object with building style. When initial
+   object is edited the copied object will repeat the shape of this changes.
+   In order to make changes of the copy fully separate from initial object
+   either building style tree should be updated (by dragging a link for
+   example) or the copy should be put in edit mode.
+
 .. _tree_editor:
 
 -----------
@@ -57,3 +65,19 @@ standard tree editors except a few things.
 .. _problem1: https://developer.blender.org/T90233
 .. _problem2: https://developer.blender.org/T88795
 .. _problem3: https://developer.blender.org/T82812
+
+
+.. _errors:
+
+Errors
+^^^^^^
+
+During tree execution there can be some errors which prevents building being
+updated. Errors are shown on the :ref:`main panel <main_panel>`. It can be some
+low level error which message is not very helpful and can be considered as bug.
+Or it can be a high level error:
+
+- Size error
+    It means that some of the panels has 0 height or 0 length. Panels can have
+    0 length along any axis but not when it used to fill some space. For example
+    a panel should has length if it is used to fill a floor.

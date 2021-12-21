@@ -36,6 +36,8 @@ Main features
    Editing buildings in real time.
 
 
+.. _limitations:
+
 Limitations / roadmap
 ---------------------
 

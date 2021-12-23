@@ -1,6 +1,6 @@
-======
-Facade
-======
+===========
+Facade Node
+===========
 
 This node can combine floors into a facade style. You can imagine floors as rows
 in 2D array. So this node takes different rows and combine them together.
@@ -49,7 +49,7 @@ Scalable
 Examples
 --------
 
-.. figure:: /images/nodes/Floor.*
+.. figure:: /images/nodes/Facade.*
    :width: 700 px
 
    Example of generating facade with first, fill and last floors.

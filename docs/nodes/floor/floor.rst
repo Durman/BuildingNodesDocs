@@ -1,9 +1,12 @@
-==================
-Floor Pattern Node
-==================
+==========
+Floor Node
+==========
 
 This node can combine panels into a floor. You can imagine a floor as 1D array
 of panels. Read details in :doc:`/data_structure`.
+
+Floor can be infinite of finite. A floor is infinite if it has Fill panels and
+its length parameter is equal to 0. In all other cases it's finite.
 
 Inputs
 ------
@@ -21,16 +24,16 @@ Properties
 ----------
 
 Height
-  If enabled the height of the floor will be defined by this value otherwise
-  the height will be determined by the highest panel in the floor.
+  If it's more than 0 the height of the floor will be defined by this value
+  otherwise the height will be determined by the highest panel in the floor.
+
+Length
+  If it's more than 0 the length of the floor will be defined by this value.
+  This property is useful together with using :doc:`join_floors`.
 
 Scalable
-  It is used by :doc:`/nodes/facade/facade_pattern`. If true the floor will
+  It is used by :doc:`/nodes/facade/facade`. If true the floor will
   take part in adopting size of facade to actual dimensions.
-
-Join size
-  It is used by :doc:`/nodes/facade/join_facades`. It determines the width of
-  the floor in total size of the facade.
 
 Remote panel properties
 -----------------------
@@ -47,3 +50,8 @@ Floor
 
 Examples
 --------
+
+.. figure:: /images/nodes/Floor.*
+   :width: 700 px
+
+   Creating floor with flanking pilasters.

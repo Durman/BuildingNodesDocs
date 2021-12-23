@@ -23,13 +23,13 @@ Match mode
       If index is greater than number of facades it always selects the last
       facade.
   - Cycle
-      It returns facade as if they are infinitely repeated. For example 
+      It returns facades as if they are infinitely repeated. For example 
       ``A B C`` facades are given. Index 4 will select ``B`` because 
       *A(0) -> B(1) -> C(2) -> A(3) -> B(4)*
 
 Index
   Index of the facade to be used. 0 index will shoos first connected facade, 1
-  the second and so on. If there is no facade for given index the index will be
+  the second and so on. If there is no facades for given index the index will be
   ignored.
 
 Outputs

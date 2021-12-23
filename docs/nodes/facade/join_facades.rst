@@ -31,8 +31,8 @@ Match mode
     In this case the facade will remain with a gap which the style was unable
     to cover.
   Repeat
-    In this case if initial facade has more length or height than facade styles
-    can cover the remain space will be covered with last facade.
+    In this case if base facade has longer length or height than facade styles
+    can cover the remain space will be covered with last facade style.
   Cycle
     In this mode all given facade styles will be repeated if their size is 
     shooter than size of base facade. For example ``A B C`` facade styles are

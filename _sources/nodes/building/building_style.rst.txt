@@ -11,6 +11,3 @@ Inputs
 
 Facade
   Facade style to be applied to geometry
-
-Properties
-----------

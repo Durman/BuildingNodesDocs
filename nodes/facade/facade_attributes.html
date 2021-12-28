@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Facade Pattern" href="facade_pattern.html" />
-    <link rel="prev" title="Facade" href="index.html" /> 
+    <link rel="next" title="Join Facades Node" href="join_facades.html" />
+    <link rel="prev" title="Facade Node" href="facade.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,14 +46,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../categories.html">Nodes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../building/index.html">Building</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Facade</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="facade.html">Facade Node</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Facade Attributes Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="facade_pattern.html">Facade Pattern</a></li>
-<li class="toctree-l3"><a class="reference internal" href="get_facade.html">Get Facade Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="join_facades.html">Join Facades Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="select_facade.html">Select Facade Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../floor/index.html">Floor</a></li>
@@ -91,11 +91,12 @@
              
   <section id="facade-attributes-node">
 <h1>Facade Attributes Node<a class="headerlink" href="#facade-attributes-node" title="Permalink to this headline"></a></h1>
-<p>This node outputs facade attributes as fields. Read more about <a class="reference internal" href="../../data_structure.html#fields"><span class="std std-ref">Fields</span></a>
-and <a class="reference internal" href="../../data_structure.html#facades"><span class="std std-ref">Facade</span></a>.</p>
+<p>This node outputs <a class="reference internal" href="../../data_structure.html#facades"><span class="std std-ref">facade</span></a> attributes as <a class="reference internal" href="../../data_structure.html#fields"><span class="std std-ref">Fields</span></a>.</p>
 <section id="outputs">
 <h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
+<dt>Height</dt><dd><p>The height of current facade.</p>
+</dd>
 <dt>Left corner angle</dt><dd><p>Angle between current facade and neighbour facade from left side. Unit of
 angle is radian. The straight angle between outputs 0 radians. Obtuse angles
 return positive values, reflex angles return negative values. It’s possible
@@ -118,6 +119,12 @@ indexing of facades does not have any particular order.</p>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/Length_attr.png"><img alt="../../_images/Length_attr.png" src="../../_images/Length_attr.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-text">Replace panels dependent on the facade length</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -125,8 +132,8 @@ indexing of facades does not have any particular order.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Facade" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="facade_pattern.html" class="btn btn-neutral float-right" title="Facade Pattern" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="facade.html" class="btn btn-neutral float-left" title="Facade Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="join_facades.html" class="btn btn-neutral float-right" title="Join Facades Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

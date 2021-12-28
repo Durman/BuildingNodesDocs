@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Panel" href="../panel/index.html" />
-    <link rel="prev" title="Floor switch" href="floor_switch.html" /> 
+    <link rel="next" title="Select Floor Node" href="select_floor.html" />
+    <link rel="prev" title="Floor Attributes Node" href="floor_attributes.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,16 +48,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Floor</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="chain_floors.html">Chain Floors Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="floor.html">Floor Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="floor_attributes.html">Floor Attributes Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="floor_pattern.html">Floor Pattern Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="floor_switch.html">Floor switch</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Join Floors Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#remote-floor-properties">Remote floor properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="select_floor.html">Select Floor Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
@@ -94,11 +94,8 @@
              
   <section id="join-floors-node">
 <h1>Join Floors Node<a class="headerlink" href="#join-floors-node" title="Permalink to this headline"></a></h1>
-<p>This node can join floors along horizontal axis. It’s possible to classify
-to different kinds of floors - infinite and finite. The node tries to get
-finite floors first and if after that there is free space it uses infinite
-floors to full all the rest space. If it joins more then one infinite floor
-the spaces is divided between them according to their <cite>join size</cite> value.</p>
+<p>This node can join floors along horizontal axis. It can join only
+<a class="reference internal" href="floor.html"><span class="doc">infinite floors</span></a>.</p>
 <section id="inputs">
 <h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
@@ -106,12 +103,24 @@ the spaces is divided between them according to their <cite>join size</cite> val
 </dd>
 </dl>
 </section>
-<section id="remote-floor-properties">
-<h2>Remote floor properties<a class="headerlink" href="#remote-floor-properties" title="Permalink to this headline"></a></h2>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<dl>
+<dt>Match mode</dt><dd><p>It determines how to handle the case when floors are shooter than
+base facade length.</p>
 <dl class="simple">
-<dt>Join size</dt><dd><p>It is used only if there is two or more infinite floors, with Fill panel,
-to join. In this case size of the infinite floors is determined proportionally
-to their join size.</p>
+<dt>None</dt><dd><p>In this case the floor will remain with a gap which the style was unable
+to cover.</p>
+</dd>
+<dt>Repeat</dt><dd><p>In this case if facade has longer length than floor
+can cover the remain space will be covered with last floor.</p>
+</dd>
+<dt>Cycle</dt><dd><p>In this mode all given floors will be repeated if their size is
+shooter than size of base facade. For example <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span></code> floor styles are
+given. They can be stack with each other in next way <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span> <span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span> <span class="pre">A</span></code> and
+so on.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </section>
@@ -124,6 +133,12 @@ to their join size.</p>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/Join_floors.png"><img alt="../../_images/Join_floors.png" src="../../_images/Join_floors.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-text">Join floors with length 4 along horizontal axis.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -131,8 +146,8 @@ to their join size.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="floor_switch.html" class="btn btn-neutral float-left" title="Floor switch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../panel/index.html" class="btn btn-neutral float-right" title="Panel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="floor_attributes.html" class="btn btn-neutral float-left" title="Floor Attributes Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="select_floor.html" class="btn btn-neutral float-right" title="Select Floor Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

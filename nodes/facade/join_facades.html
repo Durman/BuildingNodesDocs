@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Floor" href="../floor/index.html" />
-    <link rel="prev" title="Get Facade Node" href="get_facade.html" /> 
+    <link rel="next" title="Select Facade Node" href="select_facade.html" />
+    <link rel="prev" title="Facade Attributes Node" href="facade_attributes.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,15 +46,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../categories.html">Nodes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../building/index.html">Building</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Facade</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="facade.html">Facade Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="facade_attributes.html">Facade Attributes Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="facade_pattern.html">Facade Pattern</a></li>
-<li class="toctree-l3"><a class="reference internal" href="get_facade.html">Get Facade Node</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Join Facades Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#remote-facade-properties">Remote facade properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="select_facade.html">Select Facade Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../floor/index.html">Floor</a></li>
@@ -92,12 +92,9 @@
              
   <section id="join-facades-node">
 <h1>Join Facades Node<a class="headerlink" href="#join-facades-node" title="Permalink to this headline"></a></h1>
-<p>This can combine several facades into one by putting them on top of each other.
-Also you can think about the work of this node as adding rows into a table where
-rows are floors and table is final facade.</p>
-<p>This node can join facades in different ways. If a facade does not have Fill
-floor it takes all its available facades (first and last floors). If a facade
-has Fill floor the join node will calculate available space for that facade.</p>
+<p>This node can combine several facades into one by joining them together. It
+can stack facades along X or along Z axis. It stacks facades only if they are
+<a class="reference internal" href="facade.html"><span class="doc">finite</span></a>.</p>
 <section id="inputs">
 <h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
@@ -105,19 +102,43 @@ has Fill floor the join node will calculate available space for that facade.</p>
 </dd>
 </dl>
 </section>
-<section id="remote-facade-properties">
-<h2>Remote facade properties<a class="headerlink" href="#remote-facade-properties" title="Permalink to this headline"></a></h2>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<dl>
+<dt>Direction</dt><dd><p>It determines in which direction given facades should be joined to each other.</p>
 <dl class="simple">
-<dt>Join size</dt><dd><p>This parameter is used if more than two given facades has Fill floors. In
-that case available space for each facade is calculated according to this
-parameter. For example if one facade has this parameter equal 1 and another
-facade has the parameter equal 2 than 1 facade will take 1/3 of available
-space and the second 2/3.</p>
+<dt>Vertical</dt><dd><p>In this mode facades will be put on top of each other.</p>
+</dd>
+<dt>Horizontal</dt><dd><p>In this mode facade styles will be put along length of initial facade.</p>
+</dd>
+</dl>
+</dd>
+<dt>Match mode</dt><dd><p>It determines how to handle the case when facade styles are shooter than
+initial facade.</p>
+<dl class="simple">
+<dt>None</dt><dd><p>In this case the facade will remain with a gap which the style was unable
+to cover.</p>
+</dd>
+<dt>Repeat</dt><dd><p>In this case if base facade has longer length or height than facade styles
+can cover the remain space will be covered with last facade style.</p>
+</dd>
+<dt>Cycle</dt><dd><p>In this mode all given facade styles will be repeated if their size is
+shooter than size of base facade. For example <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span></code> facade styles are
+given. They can be stack with each other in next way <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span> <span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span> <span class="pre">A</span></code> and
+so on.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/Join_facades.png"><img alt="../../_images/Join_facades.png" src="../../_images/Join_facades.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-text">Repeat some facade style with length 10 along horizontal axis.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -125,8 +146,8 @@ space and the second 2/3.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="get_facade.html" class="btn btn-neutral float-left" title="Get Facade Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../floor/index.html" class="btn btn-neutral float-right" title="Floor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="facade_attributes.html" class="btn btn-neutral float-left" title="Facade Attributes Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="select_facade.html" class="btn btn-neutral float-right" title="Select Facade Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

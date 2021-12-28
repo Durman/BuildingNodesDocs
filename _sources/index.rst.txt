@@ -1,6 +1,9 @@
 .. Building Nodes documentation master file, created by
    sphinx-quickstart on Thu Nov 25 16:46:53 2021.
 
+.. image:: /images/Intro.*
+   :width: 700 px
+
 Welcome to Building Nodes's documentation!
 ==========================================
 

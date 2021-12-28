@@ -27,3 +27,8 @@ Panel
 
 Examples
 --------
+
+.. figure:: /images/nodes/Mirror_panel.*
+   :width: 700 px
+
+   Mirror and join windows.

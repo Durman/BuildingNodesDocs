@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Floor Pattern Node" href="floor_pattern.html" />
-    <link rel="prev" title="Chain Floors Node" href="chain_floors.html" /> 
+    <link rel="next" title="Join Floors Node" href="join_floors.html" />
+    <link rel="prev" title="Floor Node" href="floor.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,14 +48,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Floor</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="chain_floors.html">Chain Floors Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="floor.html">Floor Node</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Floor Attributes Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="floor_pattern.html">Floor Pattern Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="floor_switch.html">Floor switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="join_floors.html">Join Floors Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="select_floor.html">Select Floor Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
@@ -92,15 +92,12 @@
              
   <section id="floor-attributes-node">
 <h1>Floor Attributes Node<a class="headerlink" href="#floor-attributes-node" title="Permalink to this headline"></a></h1>
-<p>This node outputs floor attributes as fields. Read more about <a class="reference internal" href="../../data_structure.html#fields"><span class="std std-ref">Fields</span></a>
-and <a class="reference internal" href="../../data_structure.html#floors"><span class="std std-ref">Floor</span></a>.</p>
+<p>This node outputs <a class="reference internal" href="../../data_structure.html#floors"><span class="std std-ref">floor</span></a> attributes as <a class="reference internal" href="../../data_structure.html#fields"><span class="std std-ref">Fields</span></a>.</p>
 <section id="outputs">
 <h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Width</dt><dd><p>The width of the floor. The value can be grater than final width of the
-floor in case if the floor does not have Fill panel.</p>
-</dd>
-<dt>Index</dt><dd><p>Index of the current floor. Indexing is starting from 0 value. Don’t mix
+<dt>Index</dt><dd><p>Index of the current floor. It is incremented only by Fill socket of
+<a class="reference internal" href="floor.html"><span class="doc">Floor Node</span></a>. Indexing is starting from 0 value. Don’t mix
 this with floor number. 0 index does not necessarily coincide with ground
 floor. This is true only if facade is starting from the ground.</p>
 </dd>
@@ -108,6 +105,12 @@ floor. This is true only if facade is starting from the ground.</p>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/Floor_attr.png"><img alt="../../_images/Floor_attr.png" src="../../_images/Floor_attr.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-text">Choose floor according its index.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -115,8 +118,8 @@ floor. This is true only if facade is starting from the ground.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="chain_floors.html" class="btn btn-neutral float-left" title="Chain Floors Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="floor_pattern.html" class="btn btn-neutral float-right" title="Floor Pattern Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="floor.html" class="btn btn-neutral float-left" title="Floor Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="join_floors.html" class="btn btn-neutral float-right" title="Join Floors Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

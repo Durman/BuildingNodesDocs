@@ -2,11 +2,13 @@
 Facade Attributes Node
 ======================
 
-This node outputs facade attributes as fields. Read more about :ref:`fields`
-and :ref:`facades`.
+This node outputs :ref:`facade <facades>` attributes as :ref:`fields`.
 
 Outputs
 -------
+
+Height
+  The height of current facade.
 
 Left corner angle
   Angle between current facade and neighbour facade from left side. Unit of
@@ -31,5 +33,12 @@ Index
 Length
   Distance between left and right corners.
 
+.. todo remove azimuth
+
 Examples
 --------
+
+.. figure:: /images/nodes/Length_attr.*
+   :width: 700 px
+
+   Replace panels dependent on the facade length

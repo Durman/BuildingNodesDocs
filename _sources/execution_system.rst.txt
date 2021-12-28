@@ -43,6 +43,8 @@ Both updates can be enabled/disabled via :ref:`main panel <main_panel>`.
    either building style tree should be updated (by dragging a link for
    example) or the copy should be put in edit mode.
 
+.. todo add information about realtime editing problems (Ctrl+R)
+
 .. _tree_editor:
 
 -----------

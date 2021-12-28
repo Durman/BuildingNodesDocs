@@ -18,7 +18,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Select Floor Node" href="select_floor.html" />
+    <link rel="next" title="Panel" href="../panel/index.html" />
     <link rel="prev" title="Floor Attributes Node" href="floor_attributes.html" /> 
 </head>
 
@@ -47,7 +47,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../building/index.html">Building</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../facade/index.html">Facade</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Floor</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="chain_floors.html">Chain Floors Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="floor.html">Floor Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="floor_attributes.html">Floor Attributes Node</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Join Floors Node</a><ul>
@@ -57,7 +56,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="select_floor.html">Select Floor Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
@@ -94,8 +92,9 @@
              
   <section id="join-floors-node">
 <h1>Join Floors Node<a class="headerlink" href="#join-floors-node" title="Permalink to this headline"></a></h1>
-<p>This node can join floors along horizontal axis. It can join only
-<a class="reference internal" href="floor.html"><span class="doc">infinite floors</span></a>.</p>
+<p>This node can join floors along horizontal or vertical axis. If join axis is
+horizontal it can join only <a class="reference internal" href="floor.html"><span class="doc">finite floors</span></a> otherwise the first
+input floor will be outputted.</p>
 <section id="inputs">
 <h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
@@ -106,13 +105,21 @@
 <section id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
 <dl>
+<dt>Direction</dt><dd><p>It determines in which direction given floors should be joined to each other.</p>
+<dl class="simple">
+<dt>Vertical</dt><dd><p>In this mode floors will be put on top of each other.</p>
+</dd>
+<dt>Horizontal</dt><dd><p>In this mode floors will be put along length of initial facade.</p>
+</dd>
+</dl>
+</dd>
 <dt>Match mode</dt><dd><p>It determines how to handle the case when floors are shooter than
 base facade length.</p>
 <dl class="simple">
 <dt>None</dt><dd><p>In this case the floor will remain with a gap which the style was unable
 to cover.</p>
 </dd>
-<dt>Repeat</dt><dd><p>In this case if facade has longer length than floor
+<dt>Repeat</dt><dd><p>In this case if facade has longer size than floor
 can cover the remain space will be covered with last floor.</p>
 </dd>
 <dt>Cycle</dt><dd><p>In this mode all given floors will be repeated if their size is
@@ -139,6 +146,12 @@ so on.</p>
 <p><span class="caption-text">Join floors with length 4 along horizontal axis.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/Join_floors2.png"><img alt="../../_images/Join_floors2.png" src="../../_images/Join_floors2.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-text">Add ledge on the top of each floor.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -147,7 +160,7 @@ so on.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="floor_attributes.html" class="btn btn-neutral float-left" title="Floor Attributes Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="select_floor.html" class="btn btn-neutral float-right" title="Select Floor Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../panel/index.html" class="btn btn-neutral float-right" title="Panel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

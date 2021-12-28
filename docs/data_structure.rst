@@ -56,7 +56,7 @@ Facade is 1D array of floors which go from bottom to top. Floors are also 1D
 arrays of panels so about the entire facade data structure you can think as
 a 2D array or a table. But unlike table each row can have different number of
 cells and cells are not necessary joined into columns. Use 
-:doc:`/nodes/facade/facade_pattern` to create a facade.
+:doc:`/nodes/facade/facade` to create a facade.
 
 Though the shape of 2D array can't be anything but rectangle a facade can have
 any shape which can be build with mesh of quads.
@@ -78,7 +78,7 @@ Floor is just horizontal line of panels. The panels are ordered from left to
 right. Floor has some height. By default it
 is equal to highest panel in a row. If facade has panels with different height
 their height is scaled to height of the floor. Floor can be created with
-:doc:`/nodes/floor/floor_pattern`.
+:doc:`/nodes/floor/floor`.
 
 .. _panels:
 

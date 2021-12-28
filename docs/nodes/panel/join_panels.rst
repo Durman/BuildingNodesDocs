@@ -27,3 +27,11 @@ Panel
 
 Examples
 --------
+
+.. figure:: /images/nodes/Join_panels.*
+   :width: 700 px
+
+   This setup join windows and pillars in a way that central pillars are always
+   lesser than number of windows on one item. In yellow border there are two
+   panels which are joined by first Join node and in the red border there are
+   two panels which are joined by second Join node.

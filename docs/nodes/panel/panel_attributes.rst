@@ -2,15 +2,19 @@
 Panel Attributes Node
 =====================
 
-This node outputs panel attributes as fields. Read more about :ref:`fields`
-and :ref:`panels`.
+This node outputs :ref:`panels` attributes as :ref:`fields`.
 
 Outputs
 -------
 
 Index
-  Index of the panel in a row (floor) of panels. This is incrementing by
-  :doc:`/nodes/floor/floor_pattern`.
+  Index of the panel in a row (floor) of panels. It is incremented by fill
+  socket of :doc:`/nodes/floor/floor`.
 
 Examples
 --------
+
+.. figure:: /images/nodes/Panel_attr.*
+   :width: 700 px
+
+   Switch panels according to their indexes.

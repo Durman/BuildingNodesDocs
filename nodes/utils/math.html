@@ -18,6 +18,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Select Input Node" href="select_input.html" />
     <link rel="prev" title="Integer Node" href="intiger.html" /> 
 </head>
 
@@ -48,13 +49,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../floor/index.html">Floor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Utils</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="compare_values.html">Compare Values Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boolean_math.html">Boolean Math Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="comparison_math.html">Compare Math Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="float.html">Float Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="intiger.html">Integer Node</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Math Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="select_input.html">Select Input Node</a></li>
 </ul>
 </li>
 </ul>
@@ -90,19 +95,26 @@
   <section id="math-node">
 <h1>Math Node<a class="headerlink" href="#math-node" title="Permalink to this headline"></a></h1>
 <p>Node performs basic mathematical operations.</p>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Float</dt><dd><p>First float value</p>
+</dd>
+<dt>Float</dt><dd><p>Second float value</p>
+</dd>
+</dl>
+</section>
 <section id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
 <dl class="simple">
 <dt>Operation</dt><dd><p>Mode which points to what operation to use</p>
 <ul class="simple">
 <li><p><strong>add:</strong> addition</p></li>
+<li><p><strong>subtract:</strong> subtraction</p></li>
 <li><p><strong>multiply:</strong> multiplication</p></li>
+<li><p><strong>divide:</strong> division</p></li>
 <li><p><strong>reminder:</strong> remainder of the division</p></li>
 </ul>
-</dd>
-<dt>Float</dt><dd><p>First float value</p>
-</dd>
-<dt>Float</dt><dd><p>Second float value</p>
 </dd>
 </dl>
 </section>
@@ -120,6 +132,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="intiger.html" class="btn btn-neutral float-left" title="Integer Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="select_input.html" class="btn btn-neutral float-right" title="Select Input Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

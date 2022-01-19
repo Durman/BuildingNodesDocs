@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Integer Node &mdash; Building Nodes 1.0 documentation</title>
+  <title>Select Input Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Math Node" href="math.html" />
-    <link rel="prev" title="Float Node" href="float.html" /> 
+    <link rel="prev" title="Math Node" href="math.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,13 +51,15 @@
 <li class="toctree-l3"><a class="reference internal" href="boolean_math.html">Boolean Math Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="comparison_math.html">Compare Math Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="float.html">Float Node</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Integer Node</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="intiger.html">Integer Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math.html">Math Node</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Select Input Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="math.html">Math Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="select_input.html">Select Input Node</a></li>
 </ul>
 </li>
 </ul>
@@ -81,9 +82,9 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Utils</a> &raquo;</li>
-      <li>Integer Node</li>
+      <li>Select Input Node</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/nodes/utils/intiger.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/nodes/utils/select_input.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -91,23 +92,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="integer-node">
-<h1>Integer Node<a class="headerlink" href="#integer-node" title="Permalink to this headline"></a></h1>
-<p>Returns constant integer value</p>
+  <section id="select-input-node">
+<h1>Select Input Node<a class="headerlink" href="#select-input-node" title="Permalink to this headline"></a></h1>
+<p>This node can choose which upstream node should use downstream one.</p>
 <section id="inputs">
 <h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Integer</dt><dd><p>Positive and negative counting numbers, as well as zero:
-{…, −3, −2, −1, 0, 1, 2, 3, …}.</p>
+<dt>Input</dt><dd><p>Repeatable socket which expects any node to be connected.</p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Index</dt><dd><p>Index of the input to be used. 0 index will shoos first connected input, 1
+the second and so on. If there is no input for given index the index will be
+ignored or will be converted according to the match property.</p>
+</dd>
+<dt>Match mode</dt><dd><p>It determines how handle the case when given index is grater than number of
+given inputs.</p>
+<ul class="simple">
+<li><p><strong>None</strong>: ignore indexes which grater than inputs number.</p></li>
+<li><p><strong>Repeat</strong>: if index is greater than number of inputs it always selects the
+last one.</p></li>
+<li><p><strong>Cycle</strong>: it returns inputs as if they are infinitely repeated. For
+example <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span></code> inputs are given. Index 4 will select <code class="docutils literal notranslate"><span class="pre">B</span></code> because
+<em>A(0) -&gt; B(1) -&gt; C(2) -&gt; A(3) -&gt; B(4)</em></p></li>
+</ul>
 </dd>
 </dl>
 </section>
 <section id="outputs">
 <h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Integer</dt><dd><p>Value to use in upstream nodes</p>
+<dt>Input</dt><dd><p>Selected input</p>
 </dd>
 </dl>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/Panel_attr.png"><img alt="../../_images/Panel_attr.png" src="../../_images/Panel_attr.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-text">Pick a panel according to it index.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
@@ -115,8 +144,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="float.html" class="btn btn-neutral float-left" title="Float Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="math.html" class="btn btn-neutral float-right" title="Math Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="math.html" class="btn btn-neutral float-left" title="Math Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

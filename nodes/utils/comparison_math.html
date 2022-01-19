@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Integer Node &mdash; Building Nodes 1.0 documentation</title>
+  <title>Compare Math Node &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Math Node" href="math.html" />
-    <link rel="prev" title="Float Node" href="float.html" /> 
+    <link rel="next" title="Float Node" href="float.html" />
+    <link rel="prev" title="Boolean Math Node" href="boolean_math.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,13 +50,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../panel/index.html">Panel</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Utils</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="boolean_math.html">Boolean Math Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="comparison_math.html">Compare Math Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="float.html">Float Node</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Integer Node</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Compare Math Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#outputs">Outputs</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="float.html">Float Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intiger.html">Integer Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html">Math Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="select_input.html">Select Input Node</a></li>
 </ul>
@@ -81,9 +82,9 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../categories.html">Nodes</a> &raquo;</li>
           <li><a href="index.html">Utils</a> &raquo;</li>
-      <li>Integer Node</li>
+      <li>Compare Math Node</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/nodes/utils/intiger.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/nodes/utils/comparison_math.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -91,21 +92,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="integer-node">
-<h1>Integer Node<a class="headerlink" href="#integer-node" title="Permalink to this headline"></a></h1>
-<p>Returns constant integer value</p>
+  <section id="compare-math-node">
+<h1>Compare Math Node<a class="headerlink" href="#compare-math-node" title="Permalink to this headline"></a></h1>
+<p>The node performs comparison operations.</p>
 <section id="inputs">
 <h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Integer</dt><dd><p>Positive and negative counting numbers, as well as zero:
-{…, −3, −2, −1, 0, 1, 2, 3, …}.</p>
+<dt>Float</dt><dd><p>First value</p>
+</dd>
+<dt>Float</dt><dd><p>Second value</p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<dl class="simple">
+<dt>Operation</dt><dd><p>Comparison operation to use</p>
+<ul class="simple">
+<li><p><strong>Equal:</strong> true if two values are equal</p></li>
+<li><p><strong>Is close:</strong> true if tow values are close to each other according to
+given maximum possible difference</p></li>
+<li><p><strong>Not equal:</strong> true if two values are not equal</p></li>
+<li><p><strong>Grater than:</strong> true if first value is grater</p></li>
+<li><p><strong>Grater or equal:</strong> true if first value grater or equal to the second one</p></li>
+<li><p><strong>Less than:</strong>  true if first value is less</p></li>
+<li><p><strong>Less or equal:</strong>  true if first values is less or equal to the second one</p></li>
+</ul>
+</dd>
+<dt>Tolerance (Is close mode)</dt><dd><p>Maximum difference between values after which they are recognized as unequal</p>
 </dd>
 </dl>
 </section>
 <section id="outputs">
 <h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline"></a></h2>
 <dl class="simple">
-<dt>Integer</dt><dd><p>Value to use in upstream nodes</p>
+<dt>Bool</dt><dd><p>True of False value</p>
 </dd>
 </dl>
 </section>
@@ -115,8 +136,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="float.html" class="btn btn-neutral float-left" title="Float Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="math.html" class="btn btn-neutral float-right" title="Math Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="boolean_math.html" class="btn btn-neutral float-left" title="Boolean Math Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="float.html" class="btn btn-neutral float-right" title="Float Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

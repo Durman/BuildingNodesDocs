@@ -46,6 +46,11 @@ Scalable
   floors to fit total height of floors into facade height. If all floors are
   not scalable the facade may have gap in the top.
 
+Is ground
+  This property is used only for first floors. If it's true first floor will be
+  generated only on facades which start from the ground. The ground level is
+  equal to level of the bottom vertex of bounding box of a building.
+
 Examples
 --------
 

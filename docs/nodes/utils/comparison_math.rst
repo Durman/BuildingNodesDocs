@@ -1,8 +1,17 @@
-===================
-Compare Values Node
-===================
+=================
+Compare Math Node
+=================
 
 The node performs comparison operations.
+
+Inputs
+------
+
+Float
+  First value
+
+Float
+  Second value
 
 Properties
 ----------
@@ -18,12 +27,6 @@ Operation
   * **Grater or equal:** true if first value grater or equal to the second one
   * **Less than:**  true if first value is less
   * **Less or equal:**  true if first values is less or equal to the second one
-
-Float
-  First value
-
-Float
-  Second value
 
 Tolerance (Is close mode)
   Maximum difference between values after which they are recognized as unequal

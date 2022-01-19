@@ -35,6 +35,11 @@ Scalable
   It is used by :doc:`/nodes/facade/facade`. If true the floor will
   take part in adopting size of facade to actual dimensions.
 
+Is ground
+  If True and the floor is created as first it will be only shown if it stands
+  on the ground. The ground level is equal to level of the bottom vertex of
+  bounding box of a building.
+
 Remote panel properties
 -----------------------
 

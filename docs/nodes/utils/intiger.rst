@@ -4,8 +4,8 @@ Integer Node
 
 Returns constant integer value
 
-Properties
-----------
+Inputs
+------
 
 Integer
   Positive and negative counting numbers, as well as zero:

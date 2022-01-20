@@ -2,6 +2,8 @@
 Installation
 ============
 
+Before installing make sure that Blender is 3.0 version or above.
+
 * Go to the Preferences editor ``Tool bar -> Edit -> Preferences``.
 
 .. image:: /images/installation/Preferences_location.*

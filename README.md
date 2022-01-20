@@ -1,6 +1,6 @@
 # 🏗️ BuildingNodes
 
-🏠 Tool for fast procedural building modeling | [Blender](https://www.blender.org/) add-on 🏠 
+🏠 Tool for fast procedural building modeling | [Blender 3.0+](https://www.blender.org/) add-on 🏠 
 
 ⏳ Work in progress ⏳
 

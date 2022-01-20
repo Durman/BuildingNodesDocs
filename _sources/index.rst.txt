@@ -93,4 +93,5 @@ Geometry nodes and in future it also will be capable of such sort of things.
    user_interface
    data_structure
    execution_system
+   import_styles
    nodes/categories

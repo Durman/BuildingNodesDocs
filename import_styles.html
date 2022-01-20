@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; Building Nodes 1.0 documentation</title>
+  <title>Import Building Styles &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="User Interface" href="user_interface.html" />
-    <link rel="prev" title="Quick Start" href="quick_start.html" /> 
+    <link rel="next" title="Nodes" href="nodes/categories.html" />
+    <link rel="prev" title="Execution system" href="execution_system.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -39,11 +39,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user_interface.html">User Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="execution_system.html">Execution system</a></li>
-<li class="toctree-l1"><a class="reference internal" href="import_styles.html">Import Building Styles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Import Building Styles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nodes/categories.html">Nodes</a></li>
 </ul>
 
@@ -61,9 +61,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Installation</li>
+      <li>Import Building Styles</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/import_styles.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -71,30 +71,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h1>
+  <section id="import-building-styles">
+<h1>Import Building Styles<a class="headerlink" href="#import-building-styles" title="Permalink to this headline"></a></h1>
+<p>If you created a complex building style you may want to use it in different
+projects. In order to do this you have to import the style in different files
+somehow. This is possible to do with Blender append functionality.</p>
+<img alt="_images/Import_style1.png" src="_images/Import_style1.png" />
 <ul class="simple">
-<li><p>Go to the Preferences editor <code class="docutils literal notranslate"><span class="pre">Tool</span> <span class="pre">bar</span> <span class="pre">-&gt;</span> <span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span></code>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Topbar</span> <span class="pre">-&gt;</span> <span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Append</span></code></p></li>
+<li><p>In the appeared window browse to the file from which you want to import a
+building style.</p></li>
+<li><p>Open the file</p></li>
+<li><p>Inside the file you will find <em>Node tree</em> folder. If there is no such folder
+then the file does not have any Building styles.</p></li>
+<li><p>Open <em>Node tree</em> folder</p></li>
 </ul>
-<img alt="_images/Preferences_location.png" src="_images/Preferences_location.png" />
+<img alt="_images/Import_style2.png" src="_images/Import_style2.png" />
 <ul class="simple">
-<li><p>In the Preferences go to the Add-ons tab. Find and press <code class="docutils literal notranslate"><span class="pre">Install</span></code> button.</p></li>
+<li><p>Inside the folder find the name of the style (or names) you want to import
+and press append button.</p></li>
 </ul>
-<img alt="_images/Install_addon.png" src="_images/Install_addon.png" />
-<ul class="simple">
-<li><p>Find your add-on file <code class="docutils literal notranslate"><span class="pre">building_nodes.zip</span></code> amd press install add-on</p></li>
-<li><p>Press to enable the add-on</p></li>
-</ul>
-<img alt="_images/Addon_enabling.png" src="_images/Addon_enabling.png" />
-<p>More about add-on management in <a class="reference external" href="https://docs.blender.org/manual/en/current/editors/preferences/addons.html">official documentation</a>.</p>
+<p>Importing of a style is going with all dependent panels. After the import
+you can use it inside the file. Read more how to use styles in
+<a class="reference internal" href="quick_start.html"><span class="doc">Quick Start</span></a>, only instead of creating new style select the imported
+style.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In future Blender may support adding custom node groups to the asset manager
+in this case sharing of building styles will be even simpler.</p>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="quick_start.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="user_interface.html" class="btn btn-neutral float-right" title="User Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="execution_system.html" class="btn btn-neutral float-left" title="Execution system" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nodes/categories.html" class="btn btn-neutral float-right" title="Nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

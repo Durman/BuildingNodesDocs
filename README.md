@@ -1,12 +1,12 @@
 # 🏗️ BuildingNodes
 
-🏠 Tool for fast procedural building modeling | [Blender 3.0+](https://www.blender.org/) add-on 🏠 
-
-⏳ Work in progress ⏳
+🏠 Tool for fast procedural building modeling | [Blender 3.0+](https://www.blender.org/) add-on 🏠
 
 [![BuildDocs](https://github.com/Durman/BuildingNodesDocs/actions/workflows/build_docs.yml/badge.svg)](https://github.com/Durman/BuildingNodesDocs/actions/workflows/build_docs.yml)
 
 ## [Documentation](https://durman.github.io/BuildingNodesDocs/)
+
+## Download - [Blendermarket](https://blendermarket.com/products/building-nodes)
 
 ## Description
 
@@ -56,5 +56,9 @@ be edited any moment and changes will be applied at once.
 [4]: https://durman.github.io/BuildingNodesDocs/data_structure.html#base-geometry
 
 Some of this limitation should be gone in future versions.
+
+## News
+
+- **26.01.2022** The add-on was first published.
 
 https://user-images.githubusercontent.com/28003269/140365097-63408046-33dc-4fd8-8cbf-4f52fe9dc973.mp4

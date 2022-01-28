@@ -4,9 +4,12 @@
 
 [![BuildDocs](https://github.com/Durman/BuildingNodesDocs/actions/workflows/build_docs.yml/badge.svg)](https://github.com/Durman/BuildingNodesDocs/actions/workflows/build_docs.yml)
 
-## [Documentation](https://durman.github.io/BuildingNodesDocs/)
+[**Documentation**](https://durman.github.io/BuildingNodesDocs/)
 
-## Download - [Blendermarket](https://blendermarket.com/products/building-nodes)
+**Download - [Blendermarket][BM] | [Gumroad][GR]**
+
+[BM]: https://blendermarket.com/products/building-nodes
+[GR]: https://randum.gumroad.com/l/building-nodes
 
 ## Description
 

@@ -45,6 +45,7 @@ be edited any moment and changes will be applied at once.
 
 ## Limitations / Roadmap
 
+- **macOS is currently [unsupported](https://github.com/Durman/BuildingNodesDocs/issues/5).**
 - There are no any tools for roofs modeling. 
 - Using Geometry nodes for generating base meshes is currently [unsupported][1].
 - Using Loop cut tool with live update makes Blender to [crush][2]. Using edge

@@ -44,6 +44,7 @@ Main features
 Limitations / roadmap
 ---------------------
 
+- **macOS is currently** unsupported_.
 - There are no any tools for roofs modeling. 
 - Using Geometry nodes for generating base meshes is currently unsupported.
   Read :doc:`more <execution_system>`
@@ -54,6 +55,7 @@ Limitations / roadmap
 - :ref:`Base mesh <base_geometry>` should consist only of quad polygons.
 - Animation :doc:`is not supported <execution_system>`.
 
+.. _unsupported: https://github.com/Durman/BuildingNodesDocs/issues/5
 .. _crush: https://developer.blender.org/T67093
 
 Some of this limitation should gone in future versions.

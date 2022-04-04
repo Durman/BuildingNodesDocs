@@ -6,10 +6,11 @@
 
 [**Documentation**](https://durman.github.io/BuildingNodesDocs/)
 
-**Download - [Blendermarket][BM] | [Gumroad][GR]**
+**Download - [Gumroad][GR]**
 
-[BM]: https://blendermarket.com/products/building-nodes
 [GR]: https://randum.gumroad.com/l/building-nodes
+
+Also, you can contact me in [Telegram](https://t.me/SoluSerg).
 
 ## Description
 
@@ -63,6 +64,10 @@ Some of this limitation should be gone in future versions.
 
 ## News
 
+- **31.03.2022** Blender market [closed][5] the add-on page because PayPal put
+  sanctions on my account as I'm Russian citizen.
 - **26.01.2022** The add-on was first published.
+
+[5]: https://user-images.githubusercontent.com/28003269/161481199-7e69af6b-c4ae-4f23-981c-aa563a7c7789.png
 
 https://user-images.githubusercontent.com/28003269/140365097-63408046-33dc-4fd8-8cbf-4f52fe9dc973.mp4

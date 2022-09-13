@@ -6,9 +6,9 @@
 
 [**Documentation**](https://durman.github.io/BuildingNodesDocs/)
 
-**Download - [Gumroad][GR]**
+**Download - [Boosty][GR]**
 
-[GR]: https://randum.gumroad.com/l/building-nodes
+[GR]: https://boosty.to/soluserg/posts/4c59f216-a966-4fa4-b141-056d86d8bbc6?share=post_link
 
 Also, you can contact me in [Telegram](https://t.me/SoluSerg).
 

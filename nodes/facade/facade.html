@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Facade Node &mdash; Building Nodes 1.0 documentation</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -92,7 +93,7 @@
            <div itemprop="articleBody">
              
   <section id="facade-node">
-<h1>Facade Node<a class="headerlink" href="#facade-node" title="Permalink to this headline"></a></h1>
+<h1>Facade Node<a class="headerlink" href="#facade-node" title="Permalink to this heading"></a></h1>
 <p>This node can combine floors into a facade style. You can imagine floors as rows
 in 2D array. So this node takes different rows and combine them together.
 Read details in <a class="reference internal" href="../../data_structure.html"><span class="doc">Data Structure</span></a>.</p>
@@ -101,7 +102,7 @@ applied differently to facade length and height. Facade is infinite along length
 if its floors are infinite. Facade is infinite along height if it has Fill
 floor and Height parameter is equal 0. In all other cases a facade is finite.</p>
 <section id="inputs">
-<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline"></a></h2>
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this heading"></a></h2>
 <dl class="simple">
 <dt>Last</dt><dd><p>Last floor</p>
 </dd>
@@ -115,7 +116,7 @@ will be used any way.</p>
 </dl>
 </section>
 <section id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h2>
 <dl class="simple">
 <dt>Height</dt><dd><p>This is 0 by default what means that it’s equal to actual facade height.
 This value can be overridden and generated style will be shooter than actual
@@ -127,7 +128,7 @@ style.</p>
 </dl>
 </section>
 <section id="remote-floor-properties">
-<h2>Remote floor properties<a class="headerlink" href="#remote-floor-properties" title="Permalink to this headline"></a></h2>
+<h2>Remote floor properties<a class="headerlink" href="#remote-floor-properties" title="Permalink to this heading"></a></h2>
 <dl class="simple">
 <dt>Scalable</dt><dd><p>If true the floor will be scale along Z axis together with other scalable
 floors to fit total height of floors into facade height. If all floors are
@@ -140,7 +141,7 @@ equal to level of the bottom vertex of bounding box of a building.</p>
 </dl>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/Facade.png"><img alt="../../_images/Facade.png" src="../../_images/Facade.png" style="width: 700px;" /></a>
 <figcaption>

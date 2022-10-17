@@ -97,3 +97,4 @@ Geometry nodes and in future it also will be capable of such sort of things.
    execution_system
    import_styles
    nodes/categories
+   release_notes

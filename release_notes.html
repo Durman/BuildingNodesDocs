@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; Building Nodes 1.0 documentation</title>
+  <title>Release Notes &mdash; Building Nodes 1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="User Interface" href="user_interface.html" />
-    <link rel="prev" title="Quick Start" href="quick_start.html" /> 
+    <link rel="prev" title="Select Input Node" href="nodes/utils/select_input.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,13 +40,16 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user_interface.html">User Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="execution_system.html">Execution system</a></li>
 <li class="toctree-l1"><a class="reference internal" href="import_styles.html">Import Building Styles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nodes/categories.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-1-17-10-2022">v1.0.1 (17.10.2022)</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -64,9 +66,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Installation</li>
+      <li>Release Notes</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/release_notes.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -74,31 +76,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
-<p>Before installing make sure that Blender is 3.0 version or above.</p>
+  <section id="release-notes">
+<h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this heading"></a></h1>
+<section id="v1-0-1-17-10-2022">
+<h2>v1.0.1 (17.10.2022)<a class="headerlink" href="#v1-0-1-17-10-2022" title="Permalink to this heading"></a></h2>
+<p><strong>Bug fixes:</strong></p>
 <ul class="simple">
-<li><p>Go to the Preferences editor <code class="docutils literal notranslate"><span class="pre">Tool</span> <span class="pre">bar</span> <span class="pre">-&gt;</span> <span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span></code>.</p></li>
+<li><p>Fix sorting Object names according to Blender logic (Panel node could point
+to wrong object).</p></li>
+<li><p>Fix panels with negative probabilities for random panel node.</p></li>
+<li><p>Switch current tree to None in the style editor when active object is removed.</p></li>
+<li><p>Fix problem of adding new Building tree in Blender 3.3.</p></li>
 </ul>
-<img alt="_images/Preferences_location.png" src="_images/Preferences_location.png" />
-<ul class="simple">
-<li><p>In the Preferences go to the Add-ons tab. Find and press <code class="docutils literal notranslate"><span class="pre">Install</span></code> button.</p></li>
-</ul>
-<img alt="_images/Install_addon.png" src="_images/Install_addon.png" />
-<ul class="simple">
-<li><p>Find your add-on file <code class="docutils literal notranslate"><span class="pre">building_nodes.zip</span></code> amd press install add-on</p></li>
-<li><p>Press to enable the add-on</p></li>
-</ul>
-<img alt="_images/Addon_enabling.png" src="_images/Addon_enabling.png" />
-<p>More about add-on management in <a class="reference external" href="https://docs.blender.org/manual/en/current/editors/preferences/addons.html">official documentation</a>.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="quick_start.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="user_interface.html" class="btn btn-neutral float-right" title="User Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nodes/utils/select_input.html" class="btn btn-neutral float-left" title="Select Input Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Structure &mdash; Building Nodes 1.0 documentation</title>
@@ -11,12 +11,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Building Nodes
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Building Nodes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -70,8 +73,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Data Structure</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Structure</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/data_structure.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -82,7 +85,7 @@
            <div itemprop="articleBody">
              
   <section id="data-structure">
-<h1>Data Structure<a class="headerlink" href="#data-structure" title="Permalink to this heading"></a></h1>
+<h1>Data Structure<a class="headerlink" href="#data-structure" title="Link to this heading"></a></h1>
 <a class="reference internal image-reference" href="_images/Facade_data_structure.jpg"><img alt="_images/Facade_data_structure.jpg" src="_images/Facade_data_structure.jpg" style="width: 700px;" /></a>
 <p>If you have a look at the facade you can find that it can be split into a few
 principle blocks from which the whole facade can be recreated. This feature of
@@ -93,7 +96,7 @@ surfaces and building base geometry is used. The advantage of this approach is
 that the same panels and rules can be applied to multiple objects. Also it
 possible to re-apply the rules whenever an object is changed.</p>
 <section id="base-geometry">
-<span id="id1"></span><h2>Base geometry<a class="headerlink" href="#base-geometry" title="Permalink to this heading"></a></h2>
+<span id="id1"></span><h2>Base geometry<a class="headerlink" href="#base-geometry" title="Link to this heading"></a></h2>
 <p>This is basic Blender mesh object which should be turned into a building.
 Before applying rules its geometry is parsed into a facades.
 Face is recognized as part of a facade according to certain rules:</p>
@@ -121,7 +124,7 @@ line of edges with <code class="docutils literal notranslate"><span class="pre">
 are.</p>
 </section>
 <section id="facade">
-<span id="facades"></span><h2>Facade<a class="headerlink" href="#facade" title="Permalink to this heading"></a></h2>
+<span id="facades"></span><h2>Facade<a class="headerlink" href="#facade" title="Link to this heading"></a></h2>
 <p>Facade is 1D array of floors which go from bottom to top. Floors are also 1D
 arrays of panels so about the entire facade data structure you can think as
 a 2D array or a table. But unlike table each row can have different number of
@@ -137,7 +140,7 @@ edges is to close to put there a floor or a panel then such edges are just
 ignored.</p>
 </section>
 <section id="floor">
-<span id="floors"></span><h2>Floor<a class="headerlink" href="#floor" title="Permalink to this heading"></a></h2>
+<span id="floors"></span><h2>Floor<a class="headerlink" href="#floor" title="Link to this heading"></a></h2>
 <p>Floor is just horizontal line of panels. The panels are ordered from left to
 right. Floor has some height. By default it
 is equal to highest panel in a row. If facade has panels with different height
@@ -145,7 +148,7 @@ their height is scaled to height of the floor. Floor can be created with
 <a class="reference internal" href="nodes/floor/floor.html"><span class="doc">Floor Node</span></a>.</p>
 </section>
 <section id="panel">
-<span id="panels"></span><h2>Panel<a class="headerlink" href="#panel" title="Permalink to this heading"></a></h2>
+<span id="panels"></span><h2>Panel<a class="headerlink" href="#panel" title="Link to this heading"></a></h2>
 <p>Panels are elementary building blocks of a facade. It typically is a 2D shape
 which represents one part of a wall or another. Though it’s a 2D shape it can
 have protruding parts. Panels are used to be distributed along a facade surface.
@@ -167,7 +170,7 @@ It is useful in case if panels should have some overlapping parts. Also
 with the operator it’s convenient to put origin into center of the panel.</p>
 </section>
 <section id="fields">
-<span id="id2"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this heading"></a></h2>
+<span id="id2"></span><h2>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h2>
 <p>First of all fields are some elementary data like number, string etc. They
 represent some characteristic of facade element as its size or index of its
 position.

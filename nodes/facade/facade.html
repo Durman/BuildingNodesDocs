@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Facade Node &mdash; Building Nodes 1.0 documentation</title>
@@ -11,12 +11,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Building Nodes
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Building Nodes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -81,10 +84,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../categories.html">Nodes</a> &raquo;</li>
-          <li><a href="index.html">Facade</a> &raquo;</li>
-      <li>Facade Node</li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../categories.html">Nodes</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Facade</a></li>
+      <li class="breadcrumb-item active">Facade Node</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/nodes/facade/facade.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -95,7 +98,7 @@
            <div itemprop="articleBody">
              
   <section id="facade-node">
-<h1>Facade Node<a class="headerlink" href="#facade-node" title="Permalink to this heading"></a></h1>
+<h1>Facade Node<a class="headerlink" href="#facade-node" title="Link to this heading"></a></h1>
 <p>This node can combine floors into a facade style. You can imagine floors as rows
 in 2D array. So this node takes different rows and combine them together.
 Read details in <a class="reference internal" href="../../data_structure.html"><span class="doc">Data Structure</span></a>.</p>
@@ -104,7 +107,7 @@ applied differently to facade length and height. Facade is infinite along length
 if its floors are infinite. Facade is infinite along height if it has Fill
 floor and Height parameter is equal 0. In all other cases a facade is finite.</p>
 <section id="inputs">
-<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this heading"></a></h2>
+<h2>Inputs<a class="headerlink" href="#inputs" title="Link to this heading"></a></h2>
 <dl class="simple">
 <dt>Last</dt><dd><p>Last floor</p>
 </dd>
@@ -118,7 +121,7 @@ will be used any way.</p>
 </dl>
 </section>
 <section id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h2>
+<h2>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h2>
 <dl class="simple">
 <dt>Height</dt><dd><p>This is 0 by default what means that it’s equal to actual facade height.
 This value can be overridden and generated style will be shooter than actual
@@ -130,7 +133,7 @@ style.</p>
 </dl>
 </section>
 <section id="remote-floor-properties">
-<h2>Remote floor properties<a class="headerlink" href="#remote-floor-properties" title="Permalink to this heading"></a></h2>
+<h2>Remote floor properties<a class="headerlink" href="#remote-floor-properties" title="Link to this heading"></a></h2>
 <dl class="simple">
 <dt>Scalable</dt><dd><p>If true the floor will be scale along Z axis together with other scalable
 floors to fit total height of floors into facade height. If all floors are
@@ -143,11 +146,11 @@ equal to level of the bottom vertex of bounding box of a building.</p>
 </dl>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/Facade.png"><img alt="../../_images/Facade.png" src="../../_images/Facade.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-text">Example of generating facade with first, fill and last floors.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Example of generating facade with first, fill and last floors.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Execution system &mdash; Building Nodes 1.0 documentation</title>
@@ -11,12 +11,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Building Nodes
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Building Nodes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -69,8 +72,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Execution system</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Execution system</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/execution_system.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,7 +84,7 @@
            <div itemprop="articleBody">
              
   <section id="execution-system">
-<h1>Execution system<a class="headerlink" href="#execution-system" title="Permalink to this heading"></a></h1>
+<h1>Execution system<a class="headerlink" href="#execution-system" title="Link to this heading"></a></h1>
 <p>You can think about the add-on as a custom modifier based on node editor
 (similar to geometry nodes modifier). Except that you won’t be able to find
 it neither in list of modifiers nor in modifier stack because custom modifiers
@@ -120,7 +123,7 @@ either building style tree should be updated (by dragging a link for
 example) or the copy should be put in edit mode.</p>
 </div>
 <section id="tree-editor">
-<span id="id1"></span><h2>Tree editor<a class="headerlink" href="#tree-editor" title="Permalink to this heading"></a></h2>
+<span id="id1"></span><h2>Tree editor<a class="headerlink" href="#tree-editor" title="Link to this heading"></a></h2>
 <p>In general the work in facade style editor is similar to work in any other
 standard tree editors except a few things.</p>
 <ul class="simple">
@@ -135,7 +138,7 @@ there are no custom properties per building. So there won’t be node groups
 at list until crushing issues won’t be fixed.</p></li>
 </ul>
 <section id="errors">
-<span id="id2"></span><h3>Errors<a class="headerlink" href="#errors" title="Permalink to this heading"></a></h3>
+<span id="id2"></span><h3>Errors<a class="headerlink" href="#errors" title="Link to this heading"></a></h3>
 <p>During tree execution there can be some errors which prevents building being
 updated. Errors are shown on the <a class="reference internal" href="user_interface.html#main-panel"><span class="std std-ref">main panel</span></a>. It can be some
 low level error which message is not very helpful and can be considered as bug.
